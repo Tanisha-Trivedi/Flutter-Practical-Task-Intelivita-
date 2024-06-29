@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_practicle_task/modules/home_module/view/home_screen.dart';
-import 'package:flutter_practicle_task/modules/home_module/view_model/bloc/home_bloc.dart';
+import 'package:flutter_practicle_task/modules/home_module/view_model/bloc/survey_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (context) => HomeBloc(),
-        child: const HomeScreen(),
+        create: (context) => SurveyBloc(),
+        child: SurveyPage(),
       ),
       debugShowCheckedModeBanner: false,
     );
